@@ -52,7 +52,7 @@
     "@ngx-translate/http-loader": "^4.0.0",
     "@nrwl/angular": "10.0.6",
     "@swimlane/ngx-charts": "^13.0.2",
-    "angular-oauth2-oidc": "^8.0.4",
+    "angular-oauth2-oidc": "^10.0.3",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.5",

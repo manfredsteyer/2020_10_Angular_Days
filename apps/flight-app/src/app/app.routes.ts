@@ -18,6 +18,14 @@ export const APP_ROUTES: Routes = [
     outlet: 'aux'
   },
   {
+    path: 'flight-booking',
+    loadChildren: () => import('./flight-booking/flight-booking.module')
+                          .then(f => f.FlightBookingModule),
+    data: {
+      preload: false
+    }
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }

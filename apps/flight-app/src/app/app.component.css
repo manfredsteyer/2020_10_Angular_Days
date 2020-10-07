@@ -1,3 +1,18 @@
+.loading-indicator-demo {
+
+  position: absolute;
+  z-index: 999999999999999999;
+  left: 0px;
+  top: 0x;
+  border: solid green 5px;
+  background-color: white;
+  color: red;
+  font-weight: bold;
+  font-size: 25px;
+
+}
+
+
 .loading-indicator {
   position: fixed;
   left: 0px;

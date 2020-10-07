@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { AuthService } from '../shared/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -15,10 +16,12 @@ export class HomeComponent implements OnInit {
   _userName = '';
 
   get userName(): string {
-    return this._userName;
+    return this.authService.userName;
   }
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private authService: AuthService,
+    private route: ActivatedRoute) {}
 
   changed($event): void {
     console.debug('$event.detail ', $event.target.detail);
@@ -33,10 +36,10 @@ export class HomeComponent implements OnInit {
   }
 
   login(): void {
-    this._userName = 'Login will be implemented in another exercise!';
+    this.authService.login();
   }
 
   logout(): void {
-    this._userName = '';
+    this.authService.logout();
   }
 }
